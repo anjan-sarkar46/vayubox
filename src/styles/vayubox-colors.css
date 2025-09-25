@@ -1,0 +1,143 @@
+/* Vayubox Color Palette */
+:root {
+  /* Primary Vayubox Colors */
+  --vayubox-jonquil: #F8C406;
+  --vayubox-black: #000000;
+  --vayubox-goldenrod: #D6A30A;
+  --vayubox-off-red: #F50000;
+  --vayubox-red: #FF0000;
+  --vayubox-xanthous: #E7B307;
+  --vayubox-dark-goldenrod: #A97613;
+
+  /* HSL Variations */
+  --vayubox-jonquil-hsl: hsla(47, 95%, 50%, 1);
+  --vayubox-black-hsl: hsla(0, 0%, 0%, 1);
+  --vayubox-goldenrod-hsl: hsla(45, 91%, 44%, 1);
+  --vayubox-off-red-hsl: hsla(0, 100%, 48%, 1);
+  --vayubox-red-hsl: hsla(0, 100%, 50%, 1);
+  --vayubox-xanthous-hsl: hsla(46, 94%, 47%, 1);
+  --vayubox-dark-goldenrod-hsl: hsla(40, 80%, 37%, 1);
+
+  /* RGB Variations */
+  --vayubox-jonquil-rgb: rgba(248, 196, 6, 1);
+  --vayubox-black-rgb: rgba(0, 0, 0, 1);
+  --vayubox-goldenrod-rgb: rgba(214, 163, 10, 1);
+  --vayubox-off-red-rgb: rgba(245, 0, 0, 1);
+  --vayubox-red-rgb: rgba(255, 0, 0, 1);
+  --vayubox-xanthous-rgb: rgba(231, 179, 7, 1);
+  --vayubox-dark-goldenrod-rgb: rgba(169, 118, 19, 1);
+
+  /* Gradients */
+  --vayubox-gradient-top: linear-gradient(0deg, #F8C406, #000000, #D6A30A, #F50000, #FF0000, #000000, #E7B307, #A97613);
+  --vayubox-gradient-right: linear-gradient(90deg, #F8C406, #000000, #D6A30A, #F50000, #FF0000, #000000, #E7B307, #A97613);
+  --vayubox-gradient-bottom: linear-gradient(180deg, #F8C406, #000000, #D6A30A, #F50000, #FF0000, #000000, #E7B307, #A97613);
+  --vayubox-gradient-left: linear-gradient(270deg, #F8C406, #000000, #D6A30A, #F50000, #FF0000, #000000, #E7B307, #A97613);
+  --vayubox-gradient-radial: radial-gradient(#F8C406, #000000, #D6A30A, #F50000, #FF0000, #000000, #E7B307, #A97613);
+
+  /* Light Variations for UI Elements */
+  --vayubox-jonquil-light: rgba(248, 196, 6, 0.1);
+  --vayubox-jonquil-medium: rgba(248, 196, 6, 0.5);
+  --vayubox-goldenrod-light: rgba(214, 163, 10, 0.1);
+  --vayubox-goldenrod-medium: rgba(214, 163, 10, 0.5);
+  --vayubox-xanthous-light: rgba(231, 179, 7, 0.1);
+  --vayubox-xanthous-medium: rgba(231, 179, 7, 0.5);
+
+  /* Semantic Color Mapping */
+  --vayubox-primary: var(--vayubox-jonquil);
+  --vayubox-secondary: var(--vayubox-goldenrod);
+  --vayubox-accent: var(--vayubox-xanthous);
+  --vayubox-dark: var(--vayubox-dark-goldenrod);
+  --vayubox-danger: var(--vayubox-red);
+  --vayubox-warning: var(--vayubox-off-red);
+  --vayubox-text-dark: var(--vayubox-black);
+
+  /* Background gradients for cards and sections */
+  --vayubox-card-bg: linear-gradient(135deg, rgba(248, 196, 6, 0.05), rgba(214, 163, 10, 0.05));
+  --vayubox-hero-bg: linear-gradient(135deg, rgba(248, 196, 6, 0.1), rgba(231, 179, 7, 0.1));
+}
+
+/* Override default Bootstrap primary color with Vayubox theme */
+.btn-primary {
+  background-color: var(--vayubox-primary);
+  border-color: var(--vayubox-primary);
+  color: var(--vayubox-black);
+  font-weight: 500;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--vayubox-secondary);
+  border-color: var(--vayubox-secondary);
+  color: var(--vayubox-black);
+}
+
+.btn-outline-primary {
+  color: var(--vayubox-primary);
+  border-color: var(--vayubox-primary);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--vayubox-primary);
+  border-color: var(--vayubox-primary);
+  color: var(--vayubox-black);
+}
+
+/* Success and Error states with Vayubox colors */
+.btn-success {
+  background-color: var(--vayubox-accent);
+  border-color: var(--vayubox-accent);
+  color: var(--vayubox-black);
+}
+
+.btn-danger {
+  background-color: var(--vayubox-danger);
+  border-color: var(--vayubox-danger);
+  color: white;
+}
+
+.btn-warning {
+  background-color: var(--vayubox-warning);
+  border-color: var(--vayubox-warning);
+  color: white;
+}
+
+/* Form controls with Vayubox focus colors */
+.form-control:focus {
+  border-color: var(--vayubox-primary);
+  box-shadow: 0 0 0 0.2rem rgba(248, 196, 6, 0.25);
+}
+
+/* Card styling with Vayubox theme */
+.card {
+  background: var(--vayubox-card-bg);
+  border: 1px solid rgba(248, 196, 6, 0.2);
+}
+
+/* Navigation and branding colors */
+.navbar-brand {
+  color: var(--vayubox-dark) !important;
+}
+
+.nav-link:hover {
+  color: var(--vayubox-primary) !important;
+}
+
+/* Text colors */
+.text-primary {
+  color: var(--vayubox-primary) !important;
+}
+
+.text-secondary {
+  color: var(--vayubox-secondary) !important;
+}
+
+/* Background utilities */
+.bg-primary {
+  background-color: var(--vayubox-primary) !important;
+  color: var(--vayubox-black) !important;
+}
+
+.bg-secondary {
+  background-color: var(--vayubox-secondary) !important;
+  color: var(--vayubox-black) !important;
+}

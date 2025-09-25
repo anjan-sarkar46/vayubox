@@ -1,0 +1,108 @@
+.transfer-progress-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 350px;
+  z-index: 1050;
+  transition: all 0.3s ease;
+  font-family: 'Oxanium', sans-serif;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.transfer-progress-container.minimized {
+  width: 250px;
+}
+
+.transfer-progress-card {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 12px;
+  background: white;
+  margin-bottom: 10px;
+}
+
+.transfer-progress-card .card-header {
+  background-color: #f8f9fa;
+  font-weight: 400;
+}
+
+.transfer-title {
+  max-width: 240px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.transfer-title div {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+}
+
+.transfer-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+.progress {
+  height: 8px;
+  border-radius: 4px;
+  background-color: #e2e8f0;
+}
+
+.progress-bar {
+  background-color: #0ea5e9;
+  transition: width 0.3s ease;
+}
+
+/* Progress bar variants */
+.progress-bar.bg-success {
+  background-color: #10b981;
+}
+
+.progress-bar.bg-warning {
+  background-color: #f59e0b;
+}
+
+.progress-bar.bg-danger {
+  background-color: #ef4444;
+}
+
+/* Animate progress completion */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.transfer-progress-card.completed {
+  animation: pulse 0.5s ease-in-out;
+}
+
+/* Large file transfer specific styles */
+.large-file-indicator {
+  font-size: 0.7rem;
+  color: #6366f1;
+  background-color: #eff6ff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-right: 6px;
+}
+
+/* Responsive styles */
+@media (max-width: 576px) {
+  .transfer-progress-container {
+    bottom: 70px;
+    right: 10px;
+    width: calc(100vw - 20px);
+    max-height: 70vh;
+  }
+  
+  .transfer-progress-container.minimized {
+    width: 200px;
+  }
+}
